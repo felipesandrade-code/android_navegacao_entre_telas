@@ -12,12 +12,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.navOptions
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color(0xFFED145B))
@@ -30,7 +33,7 @@ fun LoginScreen() {
             color = Color.White
         )
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate("menu") },
             colors = ButtonDefaults.buttonColors(Color.White),
             modifier = Modifier.align(Alignment.Center)
         ) {
